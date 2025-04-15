@@ -1,10 +1,16 @@
-项目名称：IPSec 国密算法支持及 Anolis 23 适配  
-项目链接：https://git.kernel.org/pub/scm/linux/kernel/git/netdev/net.git  
-导师信息：霍文，15165077960，huowen@ieisystem.com  
-难度：高  
-分类：系统安全/网络通信  
+### 项目名称
+IPSec 国密算法支持及 Anolis 23 适配  
 
-题目要求：  
+### 导师信息
+霍文，huowen@ieisystem.com  
+
+### 难度
+中~高
+
+### 分类
+系统安全/网络通信  
+
+### 题目要求  
 - 基于 Linux 6.6 或更高版本内核，扩展 IPSec 协议栈支持国密算法（SM2/SM3/SM4）；  
 - 使用 SM2 实现 IKE 密钥交换和身份认证功能；  
 - 使用 SM3 实现 IPSec 数据完整性保护；  
@@ -13,14 +19,14 @@
 - 所有功能应兼容现有国际算法（AES/SHA2/RSA），可配置算法优先级；  
 - 支持命令行用户态工具配置，生成内核补丁包、用户空间工具与测试脚本；  
 
-特征：  
+### 特征  
 - 开发平台：Linux 6.6+，Anolis 23  
 - 密码标准：GM/T 0002-2012（SM4），GM/T 0003-2012（SM2），GM/T 0004-2012（SM3）  
 - 协议兼容性：兼容 RFC 4301~4309 的 IPSec 协议框架  
 - 内核与用户态结合：需编写内核补丁与用户态测试工具  
 - 性能目标：国密算法吞吐性能相较国际算法损耗不超过 30%  
 
-预期目标：  
+### 预期目标  
 
 **第一题：基础国密算法支持**  
 - 修改 Linux 内核 crypto 子系统，添加 SM4 加解密模块；  
@@ -57,11 +63,11 @@
 
 License：GPL-2.0  
 
-参考资料：  
+### 参考资料
 1. IPSec 协议标准：RFC 4301-4309  
 2. 国密算法标准：GM/T 0002-2012, GM/T 0003-2012, GM/T 0004-2012  
 3. Anolis 23 内核开发文档：https://mirrors.openanolis.cn/anolis/23/  
 4. GmSSL 国密算法库：https://github.com/guanzhi/GmSSL  
 
-备注：  
+### 备注  
 - 用户态配置工具需支持命令行调用（如 `ip xfrm`），并提供典型使用示例。  
